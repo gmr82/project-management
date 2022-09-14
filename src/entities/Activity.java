@@ -1,16 +1,18 @@
 package entities;
 
+import java.util.Calendar;
+
 public class Activity
 {
   private int id;
   private String description;
-  private String initialDate;
-  private String finalDate;
+  private Calendar initialDate;
+  private Calendar finalDate;
   private User responsibleUser;
   // list private User collaborators;
   // list private String tasks; (tarefas a serem realizadas por cada profissional)
   
-  public Activity (int id, String description, String initialDate, String finalDate, User responsibleUser)
+  public Activity (int id, String description, Calendar initialDate, Calendar finalDate, User responsibleUser)
   {
     this.id = id;
     this.description = description;
@@ -29,12 +31,12 @@ public class Activity
     return description;
   }
 
-  public String getInitialDate ()
+  public Calendar getInitialDate ()
   {
     return initialDate;
   }
 
-  public String getFinalDate ()
+  public Calendar getFinalDate ()
   {
     return finalDate;
   }
